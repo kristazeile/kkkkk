@@ -39,22 +39,19 @@ def add_data():
     max_temp = request_data.get("max_temp")
     #datu validācija
     if not date or min_temp is None or max_temp is None:
-        return jsonify(["error": "Visi lauki ir obligāti"]), 400
+        return jsonify({"error": "Visi lauki ir obligāti"}), 400
     try:
         min_temp = float(min_temp)
         max_temp = float(max_temp)
-        except ValueError:
-        return jsonify(["error": "Temperatūrai ir jābūt skaitlim"]), 400
+    except ValueError:
+        return jsonify({"error": "Temperatūrai ir jābūt skaitlim"}), 400
     
     #saglabā datus
-    data = local_data()
-    data.append(["data": date, "min_temp": min_temp, "max_temp": max_temp])
+    data = load_data()
+    data.append({"data": date, "min_temp": min_temp, "max_temp": max_temp})
     save_data(data)
+    return jsonify({"message": "Dati saglabāti veiksmīgi!"}),201
 
 
-
-
-
-
-__name__ == "__main__":
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
