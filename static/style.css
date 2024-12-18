@@ -1,101 +1,106 @@
-/* Krāsu palete: https://www.color-hex.com/ */
-
-/* Vispārējais lapas izkārtojums */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #354d4d; /* Tumšākā krāsa malām */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    background: #F0F8FF;
+    padding: 10px;
   }
   
-  /* Mājaslapas konteiners */
-  .container {
+  body {
     width: 70%;
-    background-color: #d7e8ba; /* Gaišākā krāsa */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    background: #bacbdb;
   }
   
-  /* Galvenais virsraksts */
-  .main-heading {
-    font-size: 2rem;
-    color: #527a7a;
-    font-weight: bold;
+  h1 {
     text-align: center;
+    background: #5BBCFF; /*virsrakstiem */
+    padding: 5px;
+    font-weight: bold; /* Treknraksts */
   }
   
-  /* Apraksta teksts */
-  .description {
+  h2 {
+    color: #FF5733;
+  }
+  
+  ul {
     text-align: center;
-    color: #76b4bd;
+    padding: 0px;
   }
   
-  /* Forma */
-  .data-form {
-    margin: 20px 0;
+  li {
+    display: inline-block;
   }
   
-  .form-label {
-    display: block;
-    font-weight: bold;
-    color: #76b4bd;
-    margin-bottom: 5px;
+  .block {
+    display: inline-block;
+    background: crimson;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(116,1,1);
+    text-align: center;
+    margin: 5px;
+    font-size: 45px;
+    vertical-align: top;
   }
   
-  .form-input {
+  .game {
+    width: 500px;
+    background: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .block div {
+    display: none;
+  }
+  
+  table {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 2px solid #76b4bd;
-    border-radius: 5px;
-    font-size: 1rem;
   }
   
-  .submit-button {
-    background-color: #92c69d;
+  table td {
+    border: 1px solid gray;
+  }
+  
+  #jauns {
+    background-color: rgb(23, 113, 136);
+  }
+  
+  
+  label {
+    font-weight: bold; /* Treknraksts */
+    color: #142235;
+  }
+  
+  input[type="text"], input[type="email"], select {
+    background-color: #E8E8E8;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  button {
+    background-color: #5BBCFF; /* Mainīta krāsa pogai */
+    border-radius: 10px; /* Noapaļot */
+    padding: 10px;
     color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 15px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
   }
   
-  .submit-button:hover {
-    background-color: #527a7a;
+  button:hover {
+    background-color: #073655; /* Krāsa uzbraucot ar peli */
   }
   
-  /* Tabula */
-  .data-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    text-align: left;
+  table th {
+    font-weight: bold; /* Treknraksts */
+    color: #0f554f;
   }
   
-  .data-table th, .data-table td {
-    border: 1px solid #92c69d;
-    padding: 10px;
+  table td {
+    color: #5d889c;
   }
   
-  .data-table thead th {
-    font-weight: bold;
-    color: #76b4bd;
-  }
-  
-  .data-table tbody td {
-    color: #76b4bd;
-  }
-  
-  /* Vidējā temperatūra */
-  .average-temp {
-    font-style: italic;
-    color: #527a7a;
-    text-align: right;
+  .temp-text {
+    font-style: italic; /* Slīpraksts */
+    color: #28dce2; /* Mainīta krāsa */
   }
